@@ -12,14 +12,14 @@ app.get("/", (req, res) => {
     res.json({ status: "Express App is running!" });
 });
 
-app.get("/health", (req, res) => {
+app.get("/health", (req, res) => {4
     console.log("Health check hit");
     res.json({ status: "Express health is good..." });
 });
 
 app.get("/hello", (req, res) => {
     console.log("Hello endpoint hit");
-    console.log(`IP : ${req.headers["x-forwarded-for"] || req.socket.remoteAddress}`);
+    console.log(`IP : ${req.headers["x-forwarded-for"] || req.socket.remoteAddress}`);// what is the remote addreess ask and make the changes
     res.json({ message: "Hello from Express App!" });
 });
 
